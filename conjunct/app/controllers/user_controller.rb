@@ -1,4 +1,5 @@
 class UserController < ApplicationController
+
   def login
     @username = params[:name]
     @password = params[:password]
@@ -6,6 +7,7 @@ class UserController < ApplicationController
     puts @password
     @user = User.authenticate(@username, @password)
     if !@user.nil?
+      session[:user_id] = @user.id
       redirect_to :action => "home"
     else
       render('user/login')
@@ -13,5 +15,11 @@ class UserController < ApplicationController
   end
 
   def home
+  end
+
+  def signup
+    @username = params[:uname]
+    @password = params[:password]
+    ActionDispatch::Session
   end
 end
