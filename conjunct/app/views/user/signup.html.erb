@@ -1,0 +1,10 @@
+<h1>User#signup</h1>
+<%=  form_tag(:action => 'signup') do %>
+<%= label_tag(:q, "Username") %>
+<%= text_field_tag'uname' %>
+<br/>
+<%= label_tag(:q, "Password") %>
+<%= text_field_tag'password' %>
+<br/>
+<%= submit_tag("Signup") %>
+<%  end %>
