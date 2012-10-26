@@ -1,0 +1,22 @@
+<h1>Task#create</h1>
+
+<%= form_tag(:action => 'create') do %>
+<%= label_tag(:q, "Name") %>
+<%= text_field_tag'name' %>
+<br/>
+
+<%= label_tag(:q, "Description") %>
+<%= text_field_tag'desc' %>
+<br/>
+
+<%= label_tag(:q, "Owner") %>
+<%= text_field_tag'owner' %>
+<br/>
+
+<%= label_tag(:q, "Deadline") %>
+<%= text_field_tag'deadline' %>
+<br/>
+
+
+<%= submit_tag("Create") %>
+<%  end %>

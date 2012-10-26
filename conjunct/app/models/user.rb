@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :nric, :phone, :email, :password
 
   validates :password, :presence => true
-
+  has_and_belongs_to_many :tasks
  def my_password
    @password ||= Password.new(password)
  end
